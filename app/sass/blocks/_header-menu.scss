@@ -1,0 +1,32 @@
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  width: 242px;
+  margin-right: 42px;
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    margin-right: 0;
+  }
+  @media screen and (max-width: 1000px) {
+    display: block;
+    margin-right: 0;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  &__items{
+    @media screen and (max-width: 1000px) {
+      padding: 10px 0;
+    }
+  }
+  &__links{
+    color: $blue;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    transition: .5s;
+    &_active,
+    &:hover{
+      color: $gray-2a;
+    }
+  }
+}

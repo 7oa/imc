@@ -1,0 +1,27 @@
+.footer{
+  flex: 0 0 auto;
+  width: 100%;
+  height: 42px;
+}
+.footer-content{
+  color: $gray-63;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copiright{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.f5-studio{
+  display: block;
+  width: 29px;
+  height: 30px;
+  background-image: url('images/f5studio.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  &:hover{
+    background-position: 0 -30px;
+  }
+}

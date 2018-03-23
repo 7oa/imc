@@ -1,0 +1,121 @@
+.services-slider{
+  overflow: hidden;
+  padding-bottom: 25px;
+  .swiper-wrapper{
+    align-items: stretch;
+  }
+  .swiper-slide {
+    height: 100%;
+  }
+  &__head{
+    display: flex;
+    height: 120px;
+  }
+  &__ttl{
+    flex: 1 1 auto;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    color: $blue;
+    transition: .5s;
+    @media screen and (max-width: 1120px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__icon{
+    width: 90px;
+    flex: 0 0 auto;
+    text-align: right;
+    img{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  &__prev{
+    color: $gray-63;
+    height: 78px;
+    font-size: 14px;
+    line-height: 24px;
+    transition: .5s;
+  }
+  &__tags{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__tag{
+    margin-right: 5px;
+    color: $blue;
+    text-transform: uppercase;
+    border: 1px solid $gray-e8;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 4px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    transition: .5s;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  &__more{
+    color: $blue;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 4px;
+    transition: .5s;
+  }
+  &__item{
+    display: block;
+    border: 1px solid $gray-e8;
+    padding: 42px 34px 35px 39px;
+    height: 100%;
+    transition: .5s;
+    box-sizing: border-box;
+    @media screen and (max-width: 1120px) {
+      padding: 20px;
+    }
+    &:hover{
+      background-color: $blue;
+      box-shadow: 0 50px 50px rgba(27, 75, 255, 0.25);
+      .services-slider__ttl,
+      .services-slider__prev,
+      .services-slider__tag,
+      .services-slider__more{
+        color: $white;
+      }
+      .services-slider__tag{
+        border-color: $white;
+        &:hover{
+          background-color: $white;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &__pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .swiper-pagination-bullet{
+      width: 21px;
+      height: 21px;
+      box-sizing: border-box;
+      border: 3px solid $blue;
+      background-color: $white;
+      opacity: 1;
+      cursor: pointer;
+      @media screen and (max-width: 1120px) {
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+      }
+    }
+    .swiper-pagination-bullet-active{
+      background-color: $blue;
+    }
+  }
+}

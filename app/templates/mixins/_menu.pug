@@ -1,0 +1,5 @@
+- var nav = [{url: '/', name: 'О нас'}, {url: 'portfolio.html', name: 'Портфолио'}, {url: 'blog.html', name: 'Блог'}];
+
+mixin navItem(url, name, current)
+    li.header-menu__items
+        a.header-menu__links(class=name==current ? 'header-menu__links_active' : '', href=url, title=name)= name

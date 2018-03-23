@@ -1,0 +1,20 @@
+@import "core/vars";
+@import "core/mixins";
+@import "core/reset";
+@import "core/fonts";
+@import "core/grid";
+
+@import "plugins/swiper.min";
+
+@import "core/base";
+@import "core/header";
+@import "core/footer";
+@import "core/images";
+@import "core/buttons";
+
+@import "blocks/header-menu";
+@import "blocks/services-slider";
+
+@import "pages/index";
+
+@import "core/adaptive";

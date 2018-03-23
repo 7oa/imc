@@ -1,0 +1,19 @@
+header.header
+    .container
+        .header-content
+            a.header-logo(href="/" style="background-image:url('images/logo.png')")
+            .header-info
+                .header-slogan
+                    .header-slogan__line1
+                        a.header-slogan__link(href="#") Сервис Деск
+                    .header-slogan__line2 Удобный заказ наших услуг
+                .mobile-menu-icon.js-open-menu
+                    i.material-icons menu
+                .mobile-menu.js-menu
+                    .mobile-menu__wrapper
+                        a.header-tel(href="mail:+78009005445") +7 (800) 900-54-45
+                        .mobile-menu__close.js-close-menu
+                            i.material-icons close
+                        include ../blocks/_header-menu
+                        .header-callback
+                            button.btn.btn-callback Заказать звонок

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="60px" viewBox="0 0 87 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>imc 1с</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="imc-1с" stroke="#636D90" stroke-width="3">
+            <path d="M7.5,51.5 L79.5,51.5 L79.5,9.2173913 C79.5,4.95568117 76.0393033,1.5 71.7692308,1.5 L15.2307692,1.5 C10.9606967,1.5 7.5,4.95568117 7.5,9.2173913 L7.5,51.5 Z" id="Rectangle"></path>
+            <path d="M1.5,51.5 L1.5,55 C1.5,56.9329966 3.06700338,58.5 5,58.5 L82,58.5 C83.9329966,58.5 85.5,56.9329966 85.5,55 L85.5,51.5 L53.20449,51.5 L50.6020903,53.7222222 L36.0580313,53.7222222 L33.4346614,51.5 L1.5,51.5 Z" id="Rectangle"></path>
+            <path d="M61.113849,26.5 C61.113849,20.1487254 55.9396376,15 49.5569245,15 C43.1742113,15 38,20.1487254 38,26.5 C38,32.8512746 43.1742113,38 49.5569245,38 L68,38" id="Oval-2"></path>
+            <path d="M55.3147872,26.5 C55.3147872,23.4624339 52.7818858,21 49.6573936,21 C46.5329014,21 44,23.4624339 44,26.5 C44,29.5375661 46.5329014,32 49.6573936,32 L68,32" id="Oval-2"></path>
+            <polyline id="Path-2" points="25 15 31 15 31 40"></polyline>
+            <polyline id="Path-2" points="19 21 25 21 25 40"></polyline>
+        </g>
+    </g>
+</svg>

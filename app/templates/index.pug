@@ -1,0 +1,83 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-index
+            .container
+                .big-ttl-slider
+                    .big-ttl
+                        .big-ttl__h Инновационные ИТ–решения для бизнеса
+                        .big-ttl__description.
+                            Доступ к разработанным продуктам по модели SaaS. Расширим любой продукт на необходимый Вам функционал
+                    .big-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                .big-slider__item
+                                    .big-slider__num 128 000
+                                    .big-slider__desc Виртуальных серверов
+                            .swiper-slide
+                                .big-slider__item
+                                    .big-slider__num 11 000
+                                    .big-slider__desc Виртуальных серверов
+                            .swiper-slide
+                                .big-slider__item
+                                    .big-slider__num 12 000
+                                    .big-slider__desc Виртуальных серверов
+                        .big-slider__next
+                            i.material-icons keyboard_arrow_right
+                        .big-slider__prev
+                            i.material-icons keyboard_arrow_left
+                //end .big-ttl-slider
+
+                .services-slider
+                    .swiper-wrapper
+                        - for (var i=0; i<4; i++)
+                            .swiper-slide
+                                a.services-slider__item(href="#")
+                                    .services-slider__head
+                                        .services-slider__ttl Техническая поддержка
+                                        .services-slider__icon
+                                            img(src="images/tp.svg")
+                                    .services-slider__prev Профессиональная поддержка и решение ваших проблем ИТ-инфраструктуры
+                                    .services-slider__tags
+                                        .services-slider__tag Обслуживание
+                                        .services-slider__tag Профилактика
+                                        .services-slider__tag Монтаж
+                                        .services-slider__tag Консультирование
+                                        .services-slider__tag Аудит
+                                        .services-slider__tag Модернизация
+                                        .services-slider__more +3
+                            .swiper-slide
+                                a.services-slider__item(href="#")
+                                    .services-slider__head
+                                        .services-slider__ttl Поддержка 1С
+                                        .services-slider__icon
+                                            img(src="images/1c.svg")
+                                    .services-slider__prev Настроим, внедрим и сопроводим 1С по системе аутсорсинга выгодно и удобно
+                                    .services-slider__tags
+                                        .services-slider__tag Сопровождение конфигурации
+                            .swiper-slide
+                                a.services-slider__item(href="#")
+                                    .services-slider__head
+                                        .services-slider__ttl Географическая информационная система
+                                        .services-slider__icon
+                                            img(src="images/technology.svg")
+                                    .services-slider__prev Построим фундамент ИТ-инфраструктуры предприятия любого уровня сложности
+                                    .services-slider__tags
+                                        .services-slider__tag Консультирование
+                                        .services-slider__tag Разработка
+                                        .services-slider__tag Проектирование
+                                        .services-slider__tag Хостинг
+                                        .services-slider__tag Автоматизация
+                                        .services-slider__more +3
+                    .services-slider__pagination
+                //end .services-slider
+            //end .container
+        //end .page
+    //end workarea
