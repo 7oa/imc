@@ -1,0 +1,62 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Блог';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-inner
+            .container.page-wrapper
+                a.goback(href="#")
+                    span Главная
+                .page-head
+                    .page-ttl
+                        h1=activeMenu
+                    .page-nav
+                        a.page-nav__link2.active(href="#") Все
+                        a.page-nav__link2(href="#") Планета
+                        a.page-nav__link2(href="#") Технологии
+                        a.page-nav__link2(href="#") Утилизация
+                        a.page-nav__link2(href="#") Космос
+                .page-content
+                    .slider
+                        .blog
+                            .swiper-wrapper
+                                - for (var i=0; i<4; i++)
+                                    a.swiper-slide.blog__item.blog__item1(href="#" style="background-image:url('https://picsum.photos/600?image=1077')")
+                                        .blog__item-tag космос
+                                        .blog__item-date <span>15</span> марта
+                                        .blog__item-ttl Созданный Россией бракованный спутник заработал
+                                    a.swiper-slide.blog__item.blog__item2(href="#" style="background-image:url('https://picsum.photos/600?image=1073')")
+                                        .blog__item-tag утилизация
+                                        .blog__item-date <span>14</span> марта
+                                        .blog__item-ttl «Росатом» хочет заняться утилизацией  телефонов и ноутбуков
+
+                                    .swiper-slide.blog__combo
+                                        a.swiper-slide.blog__item.blog__item3(href="#" style="background-image:url('https://picsum.photos/600?image=1076')")
+                                            .blog__item-tag Технологии
+                                            .blog__item-date <span>13</span> марта
+                                            .blog__item-ttl Микроскопический робот может грести даже одной рукой
+                                        a.swiper-slide.blog__item.blog__item3(href="#" style="background-image:url('https://picsum.photos/600?image=1075')")
+                                            .blog__item-tag Технологии
+                                            .blog__item-date <span>12</span> марта
+                                            .blog__item-ttl Японские ученые создали робота - баскетболиста
+
+                        .slider-nav
+                            .slider-arr
+                                .prev
+                                .next
+                            .slider-progress-wrap
+                                .slider-progress
+                                .slider-progress2
+                                .slider-scrollbar
+                            .slider-num
+                                span.js-all-slide 34
+
+
+            //end .container
+        //end .page
+    //end workarea

@@ -30,6 +30,7 @@
     img{
       max-height: 100%;
       max-width: 100%;
+      transition: .5s;
     }
   }
   &__prev{
@@ -92,6 +93,9 @@
           background-color: $white;
           color: $blue;
         }
+      }
+      .services-slider__icon img{
+        filter: brightness(0) invert(1);
       }
     }
   }

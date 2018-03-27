@@ -1,0 +1,76 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Портфолио';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-inner
+            .container.page-wrapper
+                a.goback(href="#")
+                    span Главная
+                .page-head
+                    .page-ttl
+                        h1=activeMenu
+                    .page-nav
+                        a.page-nav__link.active(href="#") Все <span>34</span>
+                        a.page-nav__link(href="#") Техподдержка <span>14</span>
+                        a.page-nav__link(href="#") ГИС <span>34</span>
+                        a.page-nav__link(href="#") Поддержка 1C <span>5</span>
+                .page-content
+                    .slider
+                        .portfolio
+                            .swiper-wrapper
+                                - for (var i=0; i<4; i++)
+                                    .swiper-slide
+                                        a.portfolio__item(href="#")
+                                            .portfolio__item-img(style="background-image:url('images/safu.png')")
+                                            .portfolio__item-hover
+                                                .portfolio__item-content
+                                                    .portfolio__item-tags
+                                                        .portfolio__item-tag Хостинг
+                                                        .portfolio__item-tag Консультирование
+                                                    .portfolio__item-ttl Севералмаз
+                                                    .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
+                                    .swiper-slide
+                                        a.portfolio__item(href="#")
+                                            .portfolio__item-img(style="background-image:url('images/severalmaz.png')")
+                                                .portfolio__item-hover
+                                                    .portfolio__item-content
+                                                        .portfolio__item-tags
+                                                            .portfolio__item-tag Хостинг
+                                                            .portfolio__item-tag Консультирование
+                                                        .portfolio__item-ttl Севералмаз
+                                                        .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
+                                    .swiper-slide
+                                        a.portfolio__item(href="#")
+                                            .portfolio__item-img(style="background-image:url('images/alrosa.png')")
+                                                .portfolio__item-hover
+                                                    .portfolio__item-content
+                                                        .portfolio__item-tags
+                                                            .portfolio__item-tag Хостинг
+                                                            .portfolio__item-tag Консультирование
+                                                        .portfolio__item-ttl Севералмаз
+                                                        .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
+
+
+                        .slider-nav
+                            .slider-arr
+                                .prev
+                                .next
+                            .slider-progress-wrap
+                                .slider-progress
+                                .slider-progress2
+                                .slider-scrollbar
+                            .slider-num
+                                span.js-current-slide 1
+                                span /
+                                span.js-all-slide 1
+
+
+            //end .container
+        //end .page
+    //end workarea

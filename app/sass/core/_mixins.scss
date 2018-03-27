@@ -47,7 +47,7 @@
   box-sizing: border-box;
 }
 
-//@include @bg-img(cover);
+//@include bg-img(cover);
 @mixin bg-img($size){
   background-repeat: no-repeat;
   background-size: $size;
