@@ -5,6 +5,7 @@ $(document).ready(function() {
         spaceBetween: 0,
         preventClicks: false,
         preventClicksPropagation: false,
+        watchOverflow: true,
         navigation: {
             nextEl: '.big-slider__next',
             prevEl: '.big-slider__prev'
@@ -17,6 +18,7 @@ $(document).ready(function() {
         autoHeight: true,
         preventClicks: false,
         preventClicksPropagation: false,
+        watchOverflow: true,
         pagination: {
             el: '.services-slider__pagination',
             clickable: true
@@ -37,10 +39,8 @@ $(document).ready(function() {
         spaceBetween: 0,
         preventClicks: false,
         preventClicksPropagation: false,
-        // pagination: {
-        //     el: '.slider-progress',
-        //     type: 'progressbar'
-        // },
+        watchOverflow: true,
+        resistance: false,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -66,24 +66,19 @@ $(document).ready(function() {
                 $('.js-all-slide').text(this.slides.length);
             },
             slideChange: function(){
+                console.log('slideChange');
                 $('.js-current-slide').text(this.realIndex+1);
-            },
-            setTranslate: function(){
-                var progress = translateVal(this.scrollbar.dragEl);
-                $('.slider-progress2').css('width',progress+'px');
-            },
-            slideChangeTransitionEnd: function(){
-                var progress = translateVal(this.scrollbar.dragEl);
-                $('.slider-progress2').css('width',progress+'px');
             }
         }
     });
+
     var blog = new Swiper('.blog', {
         slidesPerView: 'auto',
         spaceBetween: 0,
         freeMode: true,
         preventClicks: false,
         preventClicksPropagation: false,
+        watchOverflow: true,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -94,16 +89,6 @@ $(document).ready(function() {
             hide: false,
             snapOnRelease: false,
             dragSize: 30
-        },
-        on: {
-            setTranslate: function(){
-                var progress = translateVal(this.scrollbar.dragEl);
-                $('.slider-progress2').css('width',progress+'px');
-            },
-            slideChangeTransitionEnd: function(){
-                var progress = translateVal(this.scrollbar.dragEl);
-                $('.slider-progress2').css('width',progress+'px');
-            }
         }
     });
     var services = new Swiper('.services', {
@@ -112,6 +97,7 @@ $(document).ready(function() {
         freeMode: true,
         preventClicks: false,
         preventClicksPropagation: false,
+        watchOverflow: true,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -122,13 +108,8 @@ $(document).ready(function() {
             hide: false,
             snapOnRelease: false,
             dragSize: 30
-        },
-
+        }
     });
-    function translateVal(el) {
-        var progress = el.style.transform.match(/translate3d\((.+)px,(.+)px,(.+)px\)/);
-        return progress[1];
-    }
 
     $('.js-open-menu').click(function () {
         $('.js-menu').addClass('open').show("slide", {direction: "right"}, 500);
