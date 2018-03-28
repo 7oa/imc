@@ -1,0 +1,112 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Техническая поддержка';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-inner
+            .container.page-wrapper
+                a.goback(href="#")
+                    span Главная
+                .page-head
+                    .page-ttl
+                        h1=activeMenu
+                .page-content
+                    .slider
+                        .services
+                            .swiper-wrapper
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s1(href="#")
+                                        .services__item-bigimg(style="background-image:url('images/tp.svg')")
+                                        .services__item-bigtext.
+                                            <strong>Окажем проф. поддержку и возьмем на себя решение проблем</strong> на каждом уровне ИТ-инфраструктуры
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Аудит  ПО
+                                            .services__item-img(style="background-image:url('images/1c.svg')")
+                                        .services__item-txt Настроим, внедрим и сопроводим 1С по системе аутсорсинга выгодно и удобно
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-center
+                                            .services__item-num 50+
+                                            .services__item-desc <span>ЮЛ</span> обслуживается нами
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-simple.
+                                            <strong>Качественная и своевременная поддержка, ее обслуживание и развитие -</strong> определяющие эффективность инвестиций в информационную инфраструктуру нашей компании
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Cтруктурированные кабельные системы (СКС)
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Построим фундамент ИТ-инфраструктуры предприятия любого уровня сложности
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Монтаж серверного оборудования
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Настроим, внедрим и сопроводим 1С по системе аутсорсинга выгодно и удобно
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-center
+                                            .services__item-num 200
+                                            .services__item-desc <span>Человек</span> в команиях-клиенитах
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-simple.
+                                            <strong>Данные факторы обеспечат соответствие ИТ-инфраструктуры бизнес-задачам компании</strong> в условиях стремительного изменения требований и условий внешней и внутренней бизнес-среды.
+                                    a.services__item.services__item_s2.services__item_bg(href="#" style="background-image:url('https://picsum.photos/600?image=1060')")
+                                        .services__item-bgtag Портфолио
+                                        .services__item-bgttl Маарс - производитель дверей, перегородок и систем облицовки
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Монтаж серверного оборудования
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Настроим, внедрим и сопроводим 1С по системе аутсорсинга выгодно и удобно
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-center
+                                            .services__item-num 200
+                                            .services__item-desc <span>Человек</span> в команиях-клиенитах
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s3(href="#")
+                                        .services__item-simple.
+                                            <strong>Качественная и своевременная поддержка, ее обслуживание и развитие -</strong> определяющие эффективность инвестиций в информационную инфраструктуру нашей компании
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Cтруктурированные кабельные системы (СКС)
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Построим фундамент ИТ-инфраструктуры предприятия любого уровня сложности
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Монтаж серверного оборудования
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Настроим, внедрим и сопроводим 1С по системе аутсорсинга выгодно и удобно
+                                    a.services__item.services__item_s3.services__item_bg(href="#" style="background-image:url('https://picsum.photos/600?image=1060')")
+                                        .services__item-bgtag БЛОГ
+                                        .services__item-bgttl Техподдержка ИМС - никаких проблем
+                                .swiper-slide.services__slide
+                                    a.services__item.services__item_s3.services__item_next(href="#")
+                                        .services__item-link Техподдержка в <span>Портфолио</span>
+                                    a.services__item.services__item_s2(href="#")
+                                        .services__item-head
+                                            .services__item-ttl Консультации по системам безопасности
+                                            .services__item-img(style="background-image:url('images/technology.svg')")
+                                        .services__item-txt Построим фундамент ИТ-инфраструктуры предприятия любого уровня сложности
+
+                        .slider-nav
+                            .slider-arr
+                                .prev
+                                .next
+                            .slider-progress-wrap
+                                .slider-progress
+                                .slider-progress2
+                                .slider-scrollbar
+
+
+            //end .container
+        //end .page
+    //end workarea

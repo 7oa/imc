@@ -96,8 +96,6 @@ $(document).ready(function() {
             dragSize: 30
         },
         on: {
-            init: function(){
-            },
             setTranslate: function(){
                 var progress = translateVal(this.scrollbar.dragEl);
                 $('.slider-progress2').css('width',progress+'px');
@@ -107,6 +105,25 @@ $(document).ready(function() {
                 $('.slider-progress2').css('width',progress+'px');
             }
         }
+    });
+    var services = new Swiper('.services', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev'
+        },
+        scrollbar: {
+            el: '.slider-scrollbar',
+            draggable: true,
+            hide: false,
+            snapOnRelease: false,
+            dragSize: 30
+        },
+
     });
     function translateVal(el) {
         var progress = el.style.transform.match(/translate3d\((.+)px,(.+)px,(.+)px\)/);
