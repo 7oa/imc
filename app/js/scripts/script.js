@@ -40,7 +40,6 @@ $(document).ready(function() {
         preventClicks: false,
         preventClicksPropagation: false,
         watchOverflow: true,
-        resistance: false,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -110,19 +109,60 @@ $(document).ready(function() {
             dragSize: 30
         }
     });
-
+    //menu
     $('.js-open-menu').click(function () {
         $('.js-menu').addClass('open').show("slide", {direction: "right"}, 500);
     });
     $('.js-close-menu').click(function () {
         $('.js-menu').removeClass('open').hide("slide", {direction: "right"}, 500);
     });
+
+    //form
+    if($('.js-movePh').length>0){
+        $('.js-movePh').each(function() {
+            if($(this).val()) $(this).next('span').addClass('moveUp');
+        });
+        $('.js-movePh').on('focus', function() {
+            $(this).next('span').addClass('moveUp');
+        });
+        $('.js-movePh').on('focusout', function() {
+            if(!$(this).val()) $(this).next('span').removeClass('moveUp');
+        });
+        $("#phone").mask("+7 999 999 99 99");
+    }
+    $('.js-submit').hover(
+        function(){
+            $(this).parents('.js-form').addClass('hover');
+        },
+        function(){
+            $(this).parents('.js-form').removeClass('hover');
+        }
+    );
+    $('.js-open-form').click(function () {
+        if (window.matchMedia('(max-width: 1000px)').matches) {
+            $('.js-menu').removeClass('open').hide("slide", {direction: "right"}, 500);
+        }
+        $('.js-form').addClass('open').show("slide", {direction: "right"}, 500);
+    });
+    $('.js-close-form').click(function () {
+        $('.js-form').addClass('open').hide("slide", {direction: "right"}, 500);
+    });
 });
+//menu
 $(window).on('load resize', function(){
     if (!window.matchMedia('(max-width: 1000px)').matches) {
         $(".js-menu").show().removeClass("open");
     }
     else{
         $(".js-menu").hide().removeClass("open");
+    }
+});
+
+//form
+$(document).mouseup(function (e){
+    var div = $(".js-form");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('.js-form').removeClass('open').hide("slide", {direction: "right"}, 500);
     }
 });

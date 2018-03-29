@@ -1,0 +1,209 @@
+.form-wrapper{
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  min-height: 568px;
+  width: 500px;
+  box-shadow: 0 50px 50px rgba(0, 128, 255, 0.25);
+  background-color: $white;
+  z-index: 99;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+  &:before{
+    content:'';
+    display: block;
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 65px;
+    margin: 0 auto;
+    width: 70px;
+    height: 62px;
+    background-image: url('images/form-bg.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    opacity: .4;
+    transition: .5s;
+    @media screen and (max-height: 780px) {
+      display: none;
+    }
+  }
+  &.hover:before{
+    filter: none;
+    opacity: 1;
+  }
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 70px;
+  box-sizing: border-box;
+  @media screen and (max-height: 780px) {
+    padding-top: 20px;
+  }
+  &__close{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  &__head{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__body{
+    width: 355px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media screen and (max-width: 360px) {
+      width: 90%;
+    }
+  }
+  &__ttl{
+    color: $gray-2a;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__prev{
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 190px;
+    margin: 0 auto;
+  }
+  &__button{
+    height: 130px;
+    flex: 0 0 auto;
+    @media screen and (max-height: 780px) {
+      height: 80px;
+    }
+  }
+  &__row{
+    margin-bottom: 30px;
+    @media screen and (max-height: 600px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__hlp{
+    position: relative;
+    padding-top: 10px;
+  }
+  &__input,
+  &__textarea{
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $gray-e8;
+    font-family: Roboto, sans-serif;
+    transition: .5s;
+    box-sizing: border-box;
+    &:focus{
+      border-bottom: 2px solid $yellow;
+    }
+  }
+  &__input{
+    height: 36px;
+    line-height: 36px;
+  }
+  &__textarea{
+    height: 100px;
+    resize: none;
+    padding: 0;
+    @media screen and (max-height: 780px) {
+      height: 60px;
+    }
+  }
+  &__placeholder{
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    transition: .3s ease all;
+    color: $gray-2a;
+    span{
+      color: $yellow;
+    }
+    &.moveUp{
+      top: -12px;
+      font-size: 14px;
+      color: $gray-5e;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+  &__label{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: $gray-2a;
+  }
+  &__submit{
+    color: $white;
+    font-size: 24px;
+    line-height: 130px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: $yellow;
+    text-align: center;
+    transition: .5s;
+    @media screen and (max-height: 780px) {
+      line-height: 80px;
+    }
+    &:hover{
+      background-color: $yellow2;
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__checkbox + label {
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 25px;
+    color: $gray-2a;
+    a{
+      color: $yellow;
+      border-bottom: 1px solid $yellow;
+    }
+  }
+  &__checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid $gray-2a;
+    border-radius: 3px;
+    transition: .2s;
+    background: $white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 17px;
+  }
+  &__checkbox:checked + label:before {
+    background: $yellow;
+    content:'✔';
+  }
+  &__checkbox-lb{
+    margin-left: 30px;
+  }
+}

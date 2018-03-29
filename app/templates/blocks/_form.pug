@@ -1,0 +1,28 @@
+.js-form.form-wrapper
+    .form__close.js-close-form
+        i.material-icons close
+    form.form
+        .form__body
+            .form__head
+                .form__ttl Заказать звонок
+                .form__prev Укажите свои контактные данные
+            .form__fields
+                .form__row
+                    .form__hlp
+                        input.form__input.js-movePh(type="text")
+                        span.form__placeholder Имя<span>*</span>
+                .form__row
+                    .form__hlp
+                        input.form__input.js-movePh#phone(type="tel")
+                        span.form__placeholder Телефон<span>*</span>
+                .form__row
+                    .form__hlp
+                        textarea.form__textarea.js-movePh
+                        span.form__placeholder Комментарий
+                .form__row
+                    input.form__checkbox#checkbox(type="checkbox")
+                    label.form__checkbox-label(for="checkbox")
+                        .form__checkbox-lb Отправляя заявку, я <a href="#">соглашаюсь на обработку персональных данных</a>, в соответствии с <a href="#">политикой конфиденциальности</a>
+
+        .form__button
+            input.btn.form__submit.js-submit(type="submit" value="Отправить")
