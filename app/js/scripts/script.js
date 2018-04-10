@@ -3,8 +3,6 @@ $(document).ready(function() {
     var swiper1 = new Swiper('.big-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
-        preventClicks: false,
-        preventClicksPropagation: false,
         watchOverflow: true,
         navigation: {
             nextEl: '.big-slider__next',
@@ -16,8 +14,6 @@ $(document).ready(function() {
         slidesPerGroup: 3,
         spaceBetween: 0,
         autoHeight: true,
-        preventClicks: false,
-        preventClicksPropagation: false,
         watchOverflow: true,
         pagination: {
             el: '.services-slider__pagination',
@@ -37,8 +33,6 @@ $(document).ready(function() {
     var portfolio = new Swiper('.portfolio', {
         slidesPerView: 3,
         spaceBetween: 0,
-        preventClicks: false,
-        preventClicksPropagation: false,
         watchOverflow: true,
         navigation: {
             nextEl: '.next',
@@ -75,8 +69,6 @@ $(document).ready(function() {
         slidesPerView: 'auto',
         spaceBetween: 0,
         freeMode: true,
-        preventClicks: false,
-        preventClicksPropagation: false,
         watchOverflow: true,
         navigation: {
             nextEl: '.next',
@@ -94,8 +86,6 @@ $(document).ready(function() {
         slidesPerView: 'auto',
         spaceBetween: 0,
         freeMode: true,
-        preventClicks: false,
-        preventClicksPropagation: false,
         watchOverflow: true,
         navigation: {
             nextEl: '.next',
