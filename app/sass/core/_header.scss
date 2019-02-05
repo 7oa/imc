@@ -35,7 +35,7 @@
 }
 .mobile-menu-icon{
     display: none;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1080px) {
         display: block;
         background-color: $blue;
         color: $white;
@@ -45,14 +45,14 @@
         line-height: 0;
     }
     i.material-icons{
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1080px) {
             font-size: 30px;
         }
     }
 }
 .mobile-menu{
     flex: 1 1 auto;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1080px) {
         display: none;
         position: fixed;
         background-color: $white;
@@ -69,7 +69,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1080px) {
             display: block;
         }
     }
@@ -77,11 +77,11 @@
         display: none;
     }
     &.open{
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1080px) {
             //display: block;
         }
         .mobile-menu__close{
-            @media screen and (max-width: 1000px) {
+            @media screen and (max-width: 1080px) {
                 display: block;
                 position: absolute;
                 right: 10px;
@@ -97,12 +97,12 @@
     color: $blue;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    margin-right: 150px;
+    //margin-right: 150px;
     flex: 0 0 auto;
     @media screen and (max-width: 1200px) {
         margin-right: 0;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1080px) {
         margin-bottom: 20px;
     }
 }

@@ -1,0 +1,62 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Прайс-лист';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-inner
+            .container.page-wrapper
+                a.goback(href="#")
+                    span Главная
+                .page-head
+                    .page-ttl
+                        h1=activeMenu
+                .page-content
+                    .slider
+                        .price
+                            .swiper-wrapper
+                                - for(var i=0;i<3;i++)
+                                    .swiper-slide.price__slide
+                                        a.price__link(href="#")
+                                            .price__size.price__size_red PDF 5.6Mb
+                                            .price__ttl Лицензии
+                                            .price__date 01.06.2018
+                                            .price__prev.
+                                                От простой визуализации объектов интереса и поиска данных до сложных корпоративных систем с возможностями пространственной аналитики
+                                            .price__price от 186 ₽
+                                        a.price__archive(href="#" data-izimodal-open="#price") Архив прайсов
+                                    .swiper-slide.price__slide
+                                        a.price__link(href="#")
+                                            .price__size.price__size_blue DOC 1.26Mb
+                                            .price__ttl Ресурсы и сервисы
+                                            .price__date 01.06.2018
+                                            .price__prev.
+                                                От простой визуализации объектов интереса и поиска данных до сложных корпоративных систем с возможностями пространственной аналитики
+                                            .price__price от 345 ₽
+                                        a.price__archive(href="#" data-izimodal-open="#price") Архив прайсов
+                                    .swiper-slide.price__slide
+                                        a.price__link(href="#")
+                                            .price__size.price__size_green EXEL 3.36Mb
+                                            .price__ttl Прочие услуги
+                                            .price__date 01.06.2018
+                                            .price__prev.
+                                                От простой визуализации объектов интереса и поиска данных до сложных корпоративных систем с возможностями пространственной аналитики
+                                            .price__price от 2386 ₽
+                                        a.price__archive(href="#" data-izimodal-open="#price") Архив прайсов
+
+                        .slider-nav
+                            .slider-arr
+                                .prev
+                                .next
+                            .slider-progress-wrap
+                                .slider-progress
+                                .slider-scrollbar
+                    include popups/_price-popup
+
+            //end .container
+        //end .page
+    //end workarea

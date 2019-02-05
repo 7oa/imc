@@ -89,12 +89,6 @@
       height: 80px;
     }
   }
-  &__row{
-    margin-bottom: 30px;
-    @media screen and (max-height: 600px) {
-      margin-bottom: 20px;
-    }
-  }
   &__hlp{
     position: relative;
     padding-top: 10px;
@@ -151,6 +145,41 @@
     margin-bottom: 10px;
     color: $gray-2a;
   }
+  &__row{
+    margin-bottom: 30px;
+    position: relative;
+    @media screen and (max-height: 600px) {
+      margin-bottom: 20px;
+    }
+    &.error{
+      .form__error{
+        display: block;
+      }
+      .form__input,
+      .form__textarea{
+        border-color: $red;
+        border-bottom-width: 2px;
+        color: $red;
+      }
+      .form__placeholder{
+        color: $red;
+        span{
+          color: $red;
+        }
+      }
+    }
+  }
+  &__error{
+    color: $red;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    width: 80px;
+    text-align: right;
+  }
+
   &__submit{
     color: $white;
     font-size: 24px;

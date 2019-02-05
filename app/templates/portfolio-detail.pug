@@ -1,0 +1,77 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = '«Росатом» хочет заняться утилизацией мобильных телефонов и ноутбуков';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page
+            .container.page-wrapper
+                .detail-portfolio
+                    .detail-portfolio__logo(style="background-image:url('images/TEMP/severalmaz.png')")
+                    .detail-portfolio__head
+                        .detail-portfolio__l
+                            .detail-portfolio__ttl «Прогресс МС-07» отстыкуют от МКС 28 марта, а затопят 26 апреля
+                            .detail-portfolio__prev Грузовой корабль "Прогресс МС-07" отстыкуется от Международной космической станции 28 марта, и в течение месяца будет находиться на орбите, затопление корабля запланировано на 26 апреля 2018 года, сообщает в понедельник <a href="#">Роскосмос</a>.
+                        .detail-portfolio__r
+                            .share
+                                .share__icons
+                                    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                                    script(src="//yastatic.net/share2/share.js")
+                                    .ya-share2(data-services="vkontakte,telegram,facebook,twitter" data-bare)
+                    .detail-portfolio__slider
+                        .swiper-wrapper
+                            - for (var i=0; i<4; i++)
+                                .swiper-slide.detail-portfolio__slide(style="background-image:url('https://picsum.photos/1000?image=105"+i+"')" data-ttl="Описание фото - то, что представляет собой фотография")
+                                .swiper-slide.detail-portfolio__slide(style="background-image:url('https://picsum.photos/1000?image=104"+i+"')" data-ttl="2Описание фото - то, что представляет собой фотография")
+
+                    .detail-portfolio__slider-nav
+                        .slider-arr
+                            .prev
+                            .next
+                        .slider-label.js-current-ttl
+                        .slider-num
+                            span.js-current-slide 1
+                            span /
+                            span.js-all-slide 1
+                    .detail-portfolio__text
+                        p "В соответствии с программой полета российского сегмента МКС расстыковка ТГК "Прогресс МС-07" со станцией запланирована на 28 марта в 16:50 мск… Сведение с орбиты транспортного корабля и затопление его несгорающих фрагментов в несудоходном районе Тихого океана предполагается 26 апреля 2018 года", — говорится в сообщении.
+                        br
+
+                        h3 Научные эксперименты
+
+                        p Отмечается, что в ходе полета в автономном режиме на борту корабля будут "проводиться запланированные научно-прикладные эксперименты".
+
+                        p "Прогресс МС-07" был запущен на ракете "Союз-2.1а" 14 октября 2017 года с космодрома Байконур. К МКС корабль пристыковался 14 октября.
+                    br
+                    br
+                    .detail-portfolio__numb
+                        .detail-portfolio__numb-c
+                            .detail-portfolio__numb-n 11
+                            .detail-portfolio__numb-d <span>Кораблей</span> на орбите
+                        .detail-portfolio__numb-c
+                            .detail-portfolio__numb-n 21
+                            .detail-portfolio__numb-d <span>Человек</span> на борту
+                        .detail-portfolio__numb-c
+                            .detail-portfolio__numb-n 45
+                            .detail-portfolio__numb-d <span>Организаций</span> под наблюдением
+
+                    .detail-portfolio__photo
+                        .detail-portfolio__photo-img(style="background-image:url('https://picsum.photos/1000?image=1050')")
+                        .detail-portfolio__photo-description Описание фото - то, что представляет собой фотография
+
+                    .detail-portfolio__text
+                        h3 Ракета - носитель
+                        p Ракета-носитель "Зенит" с первым ангольским спутником "Ангосат" стартовала с космодрома Байконур 26 декабря. После восьми минут полета от нее отделился разгонный блок "Фрегат":
+                        ol
+                            li Который затем вывел аппарат на расчетную орбиту. Спутник вышел на связь, однако позднее с него перестала поступать телеметрия.
+                            li Контракт на создание спутника РКК "Энергия" и ангольское Министерство телекоммуникаций и информационных технологий подписали в 2009 году,  в силу он вступил в 2013-м. "Ангосат" предназначен для обеспечения связи и телевизионного вещания на всем Африканском континенте.
+                            li В работах по спутнику впервые применялся созданный в РКК "Энергия" стенд виртуальной реальности.
+
+
+            //end .container
+        //end .page
+    //end workarea

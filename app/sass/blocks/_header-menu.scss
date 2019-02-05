@@ -1,21 +1,26 @@
 .header-menu{
   display: flex;
-  justify-content: space-between;
-  width: 242px;
-  margin-right: 42px;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  margin: 0 10px;
+  //width: 242px;
+  //margin-right: 42px;
   @media screen and (max-width: 1200px) {
-    width: 200px;
+    //width: 200px;
     margin-right: 0;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1080px) {
     display: block;
     margin-right: 0;
     width: auto;
     margin-bottom: 20px;
   }
   &__items{
-    @media screen and (max-width: 1000px) {
+    //margin-left: 35px;
+    flex: 0 0 auto;
+    @media screen and (max-width: 1080px) {
       padding: 10px 0;
+      //margin-left: 0;
     }
   }
   &__links{

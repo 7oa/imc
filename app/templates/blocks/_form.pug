@@ -7,14 +7,16 @@
                 .form__ttl Заказать звонок
                 .form__prev Укажите свои контактные данные
             .form__fields
-                .form__row
+                .form__row.error
                     .form__hlp
                         input.form__input.js-movePh(type="text")
                         span.form__placeholder Имя<span>*</span>
+                    .form__error Заполните поле
                 .form__row
                     .form__hlp
                         input.form__input.js-movePh#phone(type="tel")
                         span.form__placeholder Телефон<span>*</span>
+                    .form__error Заполните поле
                 .form__row
                     .form__hlp
                         textarea.form__textarea.js-movePh

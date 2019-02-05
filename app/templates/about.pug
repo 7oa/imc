@@ -1,0 +1,130 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-inner
+            .container.page-wrapper
+                .page-head
+                    .page-ttl
+                        h1 Интеллектуальные медиа системы
+                    .page-description.
+                        образовано в 2012 году для реализации инвестиционного проекта в области доставки видео контента конечным потребителям
+                .page-content
+                    .slider
+                        .about
+                            .about__year.js-selected-year
+                            .swiper-wrapper
+                                - for(var i=0;i<3;i++)
+                                    .swiper-slide.about__item(data-year="")
+                                        .about__service-list
+                                            .about__service-item
+                                                a.about__service-ttl(href="#" data-izimodal-open="#service") Группа внедрения
+                                                .about__service-txt Внедрение, сопровождение и развитие корпоративных информационных систем на платформе 1С (учетные системы), а также систем электронного документооборота и портальных решений
+                                            .about__service-item
+                                                a.about__service-ttl(href="#" data-izimodal-open="#service") Геоинформационные системы
+                                                .about__service-txt От простой визуализации объектов интереса и поиска данных до сложных корпоративных систем с возможностями пространственной аналитики
+
+                                .swiper-slide.about__item(data-year1="2018" data-year="2018")
+                                    .about__post
+                                        .about__ttl Обладаем
+                                        .about__txt
+                                            p собственным парком компьютеров, принтеров, серверным оборудованием и системами хранения данных, развернутой <a href="#">системой сервис деск</a> на платформе Naumen
+
+                                            p В нашем лице Вы можете найти партнера, обеспечивающего работу по принципу одного окна по всем вопросам ИТ
+                                            a.btn.btn-yellow(href="#") Стать партнером
+                                .swiper-slide.about__item(data-year="2018")
+                                    .about__post
+                                        .about__ttl Предлагаем
+                                        .about__txt
+                                            p уникальную услугу - офис под ключ в аренду с возможностью подневного учета техники и помесячного учета ПО с фиксацией всех обращений и предоставлением подробной информации о заявках и сроках их исполнения.
+                                .swiper-slide.about__item(data-year="2018")
+                                    .about__post
+                                        .about__ttl Обладаем
+                                        .about__txt
+                                            p собственным парком компьютеров, принтеров, серверным оборудованием и системами хранения данных, развернутой <a href="#">системой сервис деск</a> на платформе Naumen
+
+                                            p В нашем лице Вы можете найти партнера, обеспечивающего работу по принципу одного окна по всем вопросам ИТ
+                                            a.btn.btn-yellow(href="#") Стать партнером
+                                .swiper-slide.about__item(data-year="2018")
+                                    .about__post
+                                        .about__ttl Предлагаем
+                                        .about__txt
+                                            p уникальную услугу - офис под ключ в аренду с возможностью подневного учета техники и помесячного учета ПО с фиксацией всех обращений и предоставлением подробной информации о заявках и сроках их исполнения.
+
+                                .swiper-slide.about__item(data-year1="2017" data-year="2017")
+                                    .about__post2
+                                        .about__ttl В 2017 году компания стала
+                                        .about__txt
+                                            ul.about__ul
+                                                li.about__li
+                                                    .about__li-cnt
+                                                        .about__li-txt официальным партнером корпорации Microsoft, что позволило предлагать своим заказчикам услуги аренды ПО по программе SPLA.
+                                                        .about__li-img(style="background-image:url('http://pngimg.com/uploads/microsoft/microsoft_PNG16.png')")
+                                                        a.about__li-link(href="#") Статья в блоге
+                                                li.about__li
+                                                    .about__li-cnt
+                                                        .about__li-txt официальным партнером компании WMWare, что позволило предлагать своим заказчикам услугу инфраструктура в аренду (IaaS).
+                                                        .about__li-img(style="background-image:url('https://logos-download.com/wp-content/uploads/2016/09/VMware_logo.png')")
+                                                        a.about__li-link(href="#") Статья в блоге
+                                .swiper-slide.about__item(data-year="2017")
+                                    .about__post
+                                        .about__ttl Обладаем
+                                        .about__txt
+                                            p собственным парком компьютеров, принтеров, серверным оборудованием и системами хранения данных, развернутой <a href="#">системой сервис деск</a> на платформе Naumen
+
+                                            p В нашем лице Вы можете найти партнера, обеспечивающего работу по принципу одного окна по всем вопросам ИТ
+                                            a.btn.btn-yellow(href="#") Стать партнером
+                                .swiper-slide.about__item(data-year="2017")
+                                    .about__post
+                                        .about__ttl Предлагаем
+                                        .about__txt
+                                            p уникальную услугу - офис под ключ в аренду с возможностью подневного учета техники и помесячного учета ПО с фиксацией всех обращений и предоставлением подробной информации о заявках и сроках их исполнения.
+
+                                .swiper-slide.about__item(data-year1="2016" data-year="2016")
+                                    .about__post2
+                                        .about__plus
+                                            .about__plus-item
+                                                .big 1000+
+                                                .sm <span>рабочих мест</span> обустроено
+                                            .about__plus-item
+                                                .big 7
+                                                .sm <span>крупных, географически<br>распределенных сети</span> обслужено
+                                            .about__plus-item
+                                                .big 100+
+                                                .sm <span>серверов заказчиков</span><br>находилось в поддержке
+                                        .about__plus-bottom.
+                                            Поддержено на регулярной основе <strong>60+ разных баз</strong> на <a href="#">платформе 1С</a>, обеспечивая полную поддержку от обновлений и доработок до помощи по вопросам учета
+                                .swiper-slide.about__item(data-year="2016")
+                                    .about__post
+                                        .about__ttl Обладаем
+                                        .about__txt
+                                            p собственным парком компьютеров, принтеров, серверным оборудованием и системами хранения данных, развернутой <a href="#">системой сервис деск</a> на платформе Naumen
+
+                                            p В нашем лице Вы можете найти партнера, обеспечивающего работу по принципу одного окна по всем вопросам ИТ
+                                            a.btn.btn-yellow(href="#") Стать партнером
+                                .swiper-slide.about__item(data-year="2016")
+                                    .about__post
+                                        .about__ttl Предлагаем
+                                        .about__txt
+                                            p уникальную услугу - офис под ключ в аренду с возможностью подневного учета техники и помесячного учета ПО с фиксацией всех обращений и предоставлением подробной информации о заявках и сроках их исполнения.
+                        .slider-nav
+                            .slider-arr
+                                .prev
+                                .next
+                            .slider-thumbs
+                                .about-thumbs
+                                    .about-thumbs__item.js-slideto-year(data-year="2018") 2018
+                                    .about-thumbs__item.js-slideto-year(data-year="2017") 2017
+                                    .about-thumbs__item.js-slideto-year(data-year="2016") 2016
+
+
+                include popups/_service-popup
+            //end .container
+        //end .page
+    //end workarea

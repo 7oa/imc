@@ -40,6 +40,11 @@ textarea{
 .page-wrapper{
   position: relative;
 }
+.modal{
+  display: none;
+  font-family: Raleway, sans-serif;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
 .goback{
   position: absolute;
   top: 23px;
@@ -101,6 +106,10 @@ textarea{
     margin-right: 35px;
     color: $gray-2a;
     transition: .5s;
+    &_big{
+      font-size: 35px;
+      line-height: 44px;
+    }
     &:last-of-type{
       margin-right: 0;
     }
@@ -133,8 +142,21 @@ textarea{
 .page-ttl{
   color: $gray-2a;
   font-size: 35px;
-  line-height: 55px;
+  line-height: 45px;
   font-weight: 800;
+}
+.page-description{
+  max-width: 570px;
+  color: $gray-9e;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.page-description2{
+  max-width: 795px;
+  color: $gray-2a;
+  font-size: 35px;
+  line-height: 55px;
 }
 .slider{
   position: relative;
@@ -151,6 +173,15 @@ textarea{
   justify-content: space-between;
   width: 55px;
   margin-right: 27px;
+}
+.slider-thumbs{
+  flex: 1 1 auto;
+}
+.slider-label{
+  flex: 1 1 auto;
+  color: $blue;
+  font-size: 15px;
+  line-height: 25px;
 }
 .prev,
 .next{
@@ -170,6 +201,10 @@ textarea{
   position: relative;
   flex: 1 1 auto;
 }
+.slider-category{
+  flex: 1 1 auto;
+}
+
 .slider-progress{
   position: absolute;
   top: 14px;

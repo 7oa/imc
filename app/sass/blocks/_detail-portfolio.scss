@@ -1,0 +1,217 @@
+.detail-portfolio{
+  padding: 80px 0 120px;
+  &__logo{
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: $blue-light;
+    @include bg-img(50%);
+    margin: 0 auto 60px;
+    @media screen and (max-width: 425px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__ttl{
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 800;
+    text-align: center;
+    padding-left: 195px;
+    margin-bottom: 56px;
+    color: $gray-2a;
+    @media screen and (max-width: 1000px) {
+      padding-left: 0;
+    }
+  }
+  &__prev{
+    padding-left: 194px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $gray-2a;
+    font-weight: 500;
+    @media screen and (max-width: 1000px) {
+      padding-left: 0;
+    }
+    a{
+      color: $blue;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__head{
+    display: flex;
+    margin-bottom: 36px;
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
+  }
+  &__l{
+    width: 990px;
+    flex: 0 0 auto;
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &__r{
+    width: 180px;
+    flex: 0 0 auto;
+    @media screen and (max-width: 1200px) {
+      width: 20%;
+    }
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+    .share{
+      @media screen and (max-width: 900px) {
+        justify-content: center;
+      }
+    }
+  }
+  &__photo{
+    margin-bottom: 66px;
+  }
+  &__photo-img{
+    margin-left: calc((100vw - 1190px)/ -2);
+    margin-right: calc((100vw - 1190px)/ -2);
+    @include bg-img(cover);
+    height: 680px;
+    margin-bottom: 12px;
+    @media screen and (max-width: 1200px) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+    @media screen and (max-width: 768px) {
+      height: 500px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 350px;
+    }
+  }
+  &__photo-description{
+    font-size: 15px;
+    line-height: 25px;
+    color: $blue;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 25px;
+    color: $gray-2a;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    p{
+      margin-bottom: 25px;
+    }
+    h3{
+      font-size: 24px;
+      line-height: 25px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    li{
+      margin-bottom: 25px;
+    }
+    ol{
+      counter-reset: myCounter;
+      margin-left: -30px;
+      @media screen and (max-width: 900px) {
+        margin-left: 0;
+      }
+      li{
+        display: flex;
+        &:before {
+          counter-increment: myCounter;
+          content: counter(myCounter)'.';
+          color: $blue;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 25px;
+          width: 30px;
+          flex: 0 0 auto;
+        }
+      }
+    }
+  }
+  &__slider{
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-left: calc((100vw - 1190px)/ -2);
+    margin-right: calc((100vw - 1190px)/ -2);
+    @media screen and (max-width: 1200px) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+  }
+  &__slide{
+    width: 90%;
+    max-width: 1030px;
+    height: 580px;
+    @include bg-img(cover);
+    border-radius: 10px;
+    @media screen and (max-width: 768px) {
+      height: 400px;
+    }
+    @media screen and (max-width: 425px) {
+      width: 100%;
+    }
+  }
+  &__slider-nav{
+    width: 100%;
+    max-width: 1030px;
+    margin: 0 auto 43px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1200px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 425px) {
+      width: 100%;
+    }
+  }
+  &__numb{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 40px;
+    @media screen and (max-width: 600px) {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+  }
+  &__numb-c{
+    width: 250px;
+    flex: 0 0 auto;
+    text-align: center;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__numb-n{
+    color: $yellow;
+    font-size: 65px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+  &__numb-d{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: $gray-63;
+    span{
+      color: $yellow;
+    }
+  }
+}

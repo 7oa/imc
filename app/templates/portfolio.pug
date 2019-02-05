@@ -16,10 +16,8 @@ block content
                     .page-ttl
                         h1=activeMenu
                     .page-nav
-                        a.page-nav__link.active(href="#") Все <span>34</span>
-                        a.page-nav__link(href="#") Техподдержка <span>14</span>
-                        a.page-nav__link(href="#") ГИС <span>34</span>
-                        a.page-nav__link(href="#") Поддержка 1C <span>5</span>
+                        a.page-nav__link.page-nav__link_big(href="#" data-category="years").js-show-category по годам
+                        a.page-nav__link.page-nav__link_big.active(href="#" data-category="groups").js-show-category по группам
                 .page-content
                     .slider
                         .portfolio
@@ -27,7 +25,7 @@ block content
                                 - for (var i=0; i<4; i++)
                                     .swiper-slide
                                         a.portfolio__item(href="#")
-                                            .portfolio__item-img(style="background-image:url('images/safu.png')")
+                                            .portfolio__item-img(style="background-image:url('images/TEMP/safu.png')")
                                             .portfolio__item-border
                                             .portfolio__item-hover
                                                 .portfolio__item-content
@@ -36,9 +34,10 @@ block content
                                                         .portfolio__item-tag Консультирование
                                                     .portfolio__item-ttl Севералмаз
                                                     .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
+                                                    .portfolio__item-year 2018
                                     .swiper-slide
                                         a.portfolio__item(href="#")
-                                            .portfolio__item-img(style="background-image:url('images/severalmaz.png')")
+                                            .portfolio__item-img(style="background-image:url('images/TEMP/severalmaz.png')")
                                             .portfolio__item-border
                                             .portfolio__item-hover
                                                 .portfolio__item-content
@@ -47,9 +46,10 @@ block content
                                                         .portfolio__item-tag Консультирование
                                                     .portfolio__item-ttl Севералмаз
                                                     .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
+                                                    .portfolio__item-year 2018
                                     .swiper-slide
                                         a.portfolio__item(href="#")
-                                            .portfolio__item-img(style="background-image:url('images/alrosa.png')")
+                                            .portfolio__item-img(style="background-image:url('images/TEMP/alrosa.png')")
                                             .portfolio__item-border
                                             .portfolio__item-hover
                                                 .portfolio__item-content
@@ -58,15 +58,25 @@ block content
                                                         .portfolio__item-tag Консультирование
                                                     .portfolio__item-ttl Севералмаз
                                                     .portfolio__item-prev ПАО "Севералмаз" осуществляет добычу природных алмазов
-
+                                                    .portfolio__item-year 2018
 
                         .slider-nav
                             .slider-arr
                                 .prev
                                 .next
-                            .slider-progress-wrap
-                                .slider-progress
-                                .slider-scrollbar
+                            .slider-category
+                                .portfolio-category#c-groups
+                                    .portfolio-category__list
+                                        a.portfolio-category__item.selected(href="#") Все
+                                        a.portfolio-category__item(href="#") Техподдержка
+                                        a.portfolio-category__item(href="#") ГИС
+                                        a.portfolio-category__item(href="#") Поддержка 1С
+                                .portfolio-category#c-years
+                                    .portfolio-category__list
+                                        a.portfolio-category__item.selected(href="#") 2018
+                                        a.portfolio-category__item(href="#") 2017
+                                        a.portfolio-category__item(href="#") 2016
+                                        a.portfolio-category__item(href="#") 2015
                             .slider-num
                                 span.js-current-slide 1
                                 span /

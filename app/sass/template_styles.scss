@@ -5,6 +5,7 @@
 @import "core/grid";
 
 @import "plugins/swiper.min";
+@import "plugins/iziModal";
 
 @import "core/base";
 @import "core/header";
@@ -19,6 +20,12 @@
 @import "blocks/services";
 @import "blocks/ya-share2";
 @import "blocks/form";
+@import "blocks/about";
+@import "blocks/detail-portfolio";
+@import "blocks/page404";
+@import "blocks/service-popup";
+@import "blocks/price";
+@import "blocks/price-popup";
 
 @import "pages/index";
 @import "pages/detail";

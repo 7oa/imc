@@ -3,6 +3,8 @@ $(document).ready(function() {
     var swiper1 = new Swiper('.big-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         watchOverflow: true,
         navigation: {
             nextEl: '.big-slider__next',
@@ -13,8 +15,11 @@ $(document).ready(function() {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         autoHeight: true,
         watchOverflow: true,
+        mousewheel: true,
         pagination: {
             el: '.services-slider__pagination',
             clickable: true
@@ -26,24 +31,21 @@ $(document).ready(function() {
             },
             730: {
                 slidesPerView: 1,
-                slidesPerGroup: 1
+                slidesPerGroup: 1,
+                autoHeight: false
             }
         }
     });
     var portfolio = new Swiper('.portfolio', {
         slidesPerView: 3,
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         watchOverflow: true,
+        mousewheel: true,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
-        },
-        scrollbar: {
-            el: '.slider-scrollbar',
-            draggable: true,
-            hide: false,
-            snapOnRelease: false,
-            dragSize: 30
         },
         breakpoints: {
             1050: {
@@ -59,8 +61,40 @@ $(document).ready(function() {
                 $('.js-all-slide').text(this.slides.length);
             },
             slideChange: function(){
-                console.log('slideChange');
                 $('.js-current-slide').text(this.realIndex+1);
+            }
+        }
+    });
+    var portfolioDetail = new Swiper('.detail-portfolio__slider', {
+        slidesPerView: 'auto',
+        watchOverflow: true,
+        spaceBetween: 50,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev'
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 30
+            },
+            425: {
+                spaceBetween: 0
+            }
+        },
+        on: {
+            init: function(){
+                $('.js-current-slide').text(this.realIndex+1);
+                $('.js-all-slide').text(this.slides.length);
+                var activeIndex = this.activeIndex;
+                var activeTtl = $(this.slides[activeIndex]).data('ttl');
+                $('.js-current-ttl').text(activeTtl);
+            },
+            slideChange: function(){
+                $('.js-current-slide').text(this.realIndex+1);
+                var activeIndex = this.activeIndex;
+                var activeTtl = $(this.slides[activeIndex]).data('ttl');
+                $('.js-current-ttl').text(activeTtl);
             }
         }
     });
@@ -68,8 +102,11 @@ $(document).ready(function() {
     var blog = new Swiper('.blog', {
         slidesPerView: 'auto',
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         freeMode: true,
         watchOverflow: true,
+        mousewheel: true,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -85,8 +122,11 @@ $(document).ready(function() {
     var services = new Swiper('.services', {
         slidesPerView: 'auto',
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         freeMode: true,
         watchOverflow: true,
+        mousewheel: true,
         navigation: {
             nextEl: '.next',
             prevEl: '.prev'
@@ -99,6 +139,79 @@ $(document).ready(function() {
             dragSize: 30
         }
     });
+
+    var price = new Swiper('.price', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        freeMode: true,
+        watchOverflow: true,
+        mousewheel: true,
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev'
+        },
+        scrollbar: {
+            el: '.slider-scrollbar',
+            draggable: true,
+            hide: false,
+            snapOnRelease: false,
+            dragSize: 30
+        }
+    });
+    if(($('.about').length>0) && ($('.about-thumbs').length>0)) {
+        var about = new Swiper('.about', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            watchOverflow: true,
+            mousewheel: true,
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev'
+            },
+            breakpoints: {
+                425: {
+                    autoHeight: true
+                }
+            },
+            on: {
+                init: function(){
+                    var activeIndex = this.activeIndex;
+                    var year = $(this.slides[activeIndex]).data('year');
+                    $('.js-selected-year').text(year);
+                },
+                slideChange: function(){
+                    var activeIndex = this.activeIndex;
+                    var year = $(this.slides[activeIndex]).data('year');
+                    var curYear = $('.js-selected-year').text();
+                    if(year!=curYear){
+                        $('.js-selected-year').hide()
+                            .text(year).fadeTo("slow", 0.1);
+                    }
+                    if(year!=""){
+                        $('.js-slideto-year[data-year="'+year+'"]').addClass('active').siblings().removeClass('active');
+                    }
+                    else $('.js-slideto-year').removeClass('active');
+                }
+            }
+        });
+    }
+
+    //izimodal
+    if($('.popup').length>0){
+        var popup =  $('.popup').iziModal({
+            radius: 0,
+            width: 780,
+            overlayColor: 'rgba(255, 255, 255, 0.7)',
+            transitionIn: 'comingIn',
+            transitionOut: 'comingOut',
+            transitionInOverlay: 'fadeIn',
+            transitionOutOverlay: 'fadeOut'
+        });
+    }
+
     //menu
     $('.js-open-menu').click(function () {
         $('.js-menu').addClass('open').show("slide", {direction: "right"}, 500);
@@ -137,10 +250,30 @@ $(document).ready(function() {
     $('.js-close-form').click(function () {
         $('.js-form').addClass('open').hide("slide", {direction: "right"}, 500);
     });
+
+    // портфолио по группам/по городам
+    var portfolioCategory = $('.js-show-category.active').data('category');
+    $('#c-'+portfolioCategory).show();
+
+    $('.js-show-category').click(function(){
+        $(this).addClass('active')
+            .siblings().removeClass('active');
+        var portfolioCategory = $(this).data('category');
+        $('#c-'+portfolioCategory).fadeIn()
+            .siblings().hide();
+    });
+
+    $('.js-slideto-year').click(function(){
+        var year = $(this).data('year');
+        var yearSlide = $('.about__item[data-year1="'+year+'"]');
+        var slideIndex = $('.about__item').index(yearSlide);
+        about.slideTo(slideIndex);
+
+    });
 });
 //menu
 $(window).on('load resize', function(){
-    if (!window.matchMedia('(max-width: 1000px)').matches) {
+    if (!window.matchMedia('(max-width: 1080px)').matches) {
         $(".js-menu").show().removeClass("open");
     }
     else{
